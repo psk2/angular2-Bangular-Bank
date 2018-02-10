@@ -1,0 +1,26 @@
+<!--<input mdInput  type="text" (keyup)="onKeyup($event)">-->
+<!--<button class="btn" (click)="getUsers()">Click Here !</button>-->
+<form class="example-form" [formGroup] = "searchForm" (ngSubmit) = "getUsers()" >
+  <md-input-container class="example-full-width">
+     <input mdInput placeholder="Search" formControlName = "search"> 
+  </md-input-container>
+  <button md-raised-button class="md-primary">Click Here!</button>
+    
+</form>
+
+
+<h3 *ngIf="resultSetCount">No of Mataches: {{resultSetCount}}</h3>
+<md-card class="example-card" *ngFor="let result of resultSet">
+	<md-card-header>
+		<div md-card-avatar class="example-header-image"></div>
+		<md-card-title><a md-raised-button (click)="showUserDetails(result)">{{result.name}}</a></md-card-title>
+		<md-card-subtitle>{{result.alpha2_code}}</md-card-subtitle>
+		<md-card-subtitle>{{result.alpha3_code}}</md-card-subtitle>
+	</md-card-header>
+</md-card>
+
+<!--<form class="example-form">
+  <md-input-container class="example-full-width">
+    <input mdInput placeholder="Email">
+  </md-input-container>
+</form>-->

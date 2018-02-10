@@ -1,0 +1,25 @@
+<p>
+  blood-bank-details works!
+</p>
+<md-card class="example-card">
+    <table border="1px solid black" mdSort (mdSortChange)="getSortedData($event)" pageEvent>
+        <thead>
+            <tr>
+                <th *ngFor=" let key of keys" md-sort-header={{key}}>{{key}}</th>
+                <th>Approve</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of bloodBankList">
+                <td *ngFor=" let key of keys">{{row[key]}}</td>
+                <td>
+                    <button md-raised-button class="md-primary" (click)="approve(row.RRID)">Click Here!</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+     <md-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+    </md-paginator>
+</md-card>

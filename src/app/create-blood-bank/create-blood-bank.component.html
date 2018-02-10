@@ -1,0 +1,68 @@
+<form class="example-form" [formGroup] = "createbloodBankForm" (ngSubmit) = "onSubmit()" >
+	<md-card>
+		<md-card-content>
+			<h2 class="example-margin">Create New Blood Bank</h2>
+			<div fxLayout="column" fxLayoutAlign="start center" >
+				<md-input-container class="example-full-width">
+					<input mdInput placeholder="Name" formControlName = "Name">
+				</md-input-container>
+
+				<md-input-container class="example-full-width">
+					<input mdInput placeholder="Login ID" formControlName = "LoginID">
+				</md-input-container>
+
+				<md-input-container class="example-full-width">
+					<input mdInput placeholder="Auth Provider" formControlName = "AuthProvider">
+				</md-input-container>
+
+				<md-input-container class="example-full-width">
+					<input mdInput placeholder="Contact Number" formControlName = "ContactNumber">
+				</md-input-container>
+
+				<md-input-container class="example-full-width">
+					<input mdInput placeholder="Email Address" formControlName = "Email">
+				</md-input-container>
+
+				<md-input-container class="example-full-width">
+					<input mdInput placeholder="Pin Code" formControlName = "PINCode">
+				</md-input-container>
+			
+				<md-input-container class="example-full-width">
+					<input mdInput placeholder="Address Line" formControlName = "AddressLine">
+				</md-input-container>
+				<table class="example-full-width" cellspacing="0">
+					<tr>
+						<td class="adjust-width">
+							<md-input-container class="example-full-width">
+								<input mdInput placeholder="City" formControlName = "City">
+							</md-input-container>
+						</td>
+						<td class="adjust-width">
+							<md-input-container class="example-full-width">
+								<input mdInput placeholder="Landmark" formControlName = "LandMark">
+							</md-input-container>
+						</td>
+						<td class="adjust-width">
+							<md-input-container class="example-full-width">
+							<input mdInput placeholder="State" formControlName = "State">
+							</md-input-container>
+						</td>
+						<td class="adjust-width">
+							<md-input-container class="example-full-width">
+								<input mdInput placeholder="Country" formControlName = "Country">
+							</md-input-container>
+						</td>
+					</tr>
+				</table>
+
+			</div>
+			<div fxLayout="row" fxLayoutAlign="start center" >
+				<md-checkbox class="example-margin">Authorized from Camp</md-checkbox>
+			</div>
+			<div fxLayout="row" fxLayoutAlign="end center" >
+				<button md-raised-button class="btn-primary example-margin">Submit</button>
+				<button md-raised-button class="btn-cancel example-margin">Cancel</button>
+			</div>
+		</md-card-content>
+	</md-card>
+</form>

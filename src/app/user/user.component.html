@@ -1,0 +1,12 @@
+<h1 *ngIf="user">Nation Detials</h1>
+
+
+<md-card class="example-card" *ngIf="user">
+  <md-card-header>
+    <div></div>
+    <md-card-title>{{user.name | uppercase}}</md-card-title>
+    <md-card-subtitle>{{user.alpha2_code | lowercase}}</md-card-subtitle>
+    <md-card-subtitle>{{user.alpha3_code}}</md-card-subtitle>
+    
+  </md-card-header>
+</md-card>

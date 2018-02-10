@@ -1,0 +1,158 @@
+/* .example-sidenav-fab-container {
+  width: 500px;
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-fab-container md-sidenav {
+  max-width: 200px;
+}
+
+.example-sidenav-fab-container .mat-sidenav-content,
+.example-sidenav-fab-container md-sidenav {
+  display: flex;
+  overflow: visible;
+}
+
+.example-scrolling-content {
+  overflow: auto;
+}
+
+.example-fab {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+} */
+/* .md-sidenav-container { width: 100%; } */
+footer {
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #eee;
+    padding: 15px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.example-fab {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+
+.info-container {
+    cursor: default;
+    display: block;
+    position: relative;
+    top: 25px; 
+     white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 14px;
+    max-width: 200px;
+    color: #fff;
+}
+
+.user-info-image {
+    background-image: url('../../images/user.png');
+    background-size: cover; 
+    height: 50px;
+    width: 50px;
+}
+
+.user-info-name,.user-info-email {
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 18px;
+    max-width: 200px;
+    color: #fff;
+}
+
+.user-info-container {
+    cursor: default;
+    display: block;
+    position: relative;
+    top: 50px; 
+    /* bottom: 5px; */
+}
+.user-info-email {
+    font-size: 12px;
+}
+
+.md-toolbar-height {
+ min-height: 135px;
+ /* max-height:64px */
+}
+
+.sidenav-width {
+    width:300px;
+}
+
+.dashboard-card, .dashboard-card2, .dashboard-card3, .dashboard-card4 {
+  width: 160px;
+  height: 45px;
+  float: left;
+  margin: 8px;
+  background-color: #E91E63;
+  border-radius: 0%;
+}
+
+.dashboard-card2{
+   background-color:  #00BCD4;
+}
+
+.dashboard-card3{
+   background-color:  #8BC34A;
+}
+
+.dashboard-card4{
+   background-color:  #FF9800;
+}
+
+.example-header-image {
+    background-image: url('../../images/thumbs-up.png');
+    background-size: cover; 
+}
+
+.md-card-avatar-alignment {
+    height: 50px;
+    width: 50px;
+    border-radius: 0;
+    flex-shrink: 0; 
+    margin-left: -12px;
+}
+
+.md-card-title-font, .md-card-subtitle-font {
+    font-size: 14px;
+    color: white;
+}
+
+.md-card-subtitle-font {
+    font-size: 16px;
+    text-align: center;
+}
+
+.main-navigation-bg {
+    /* background-color: #ccc;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    height: 54px; */
+    background: #eee;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 2px 16px;
+}
+
+.side-menu-contents {
+    padding: 2px;
+}
+
+.app-content {
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,79 @@
+<div class="example-container mat-elevation-z8">
+	<md-card class="example-full-width">
+	<div class="example-header" [style.display]="selection.isEmpty() ? '' : 'none'">
+		<md-input-container>
+			<input mdInput #filter placeholder="Filter users">
+		</md-input-container>
+		</div>
+		<div class="example-header example-selection-header"
+			*ngIf="!selection.isEmpty()">
+		{{selection.selected.length}}
+		{{selection.selected.length == 1 ? 'user' : 'users'}}
+		selected
+	</div>
+	
+	<md-table #table [dataSource]="dataSource" mdSort>
+
+	<!--- Note that these columns can be defined in any order.
+			The actual rendered columns are set as a property on the row definition" -->
+
+	<!-- Name Column -->
+	<ng-container cdkColumnDef="RRID">
+		<md-header-cell *cdkHeaderCellDef md-sort-header class="width1"> RRID </md-header-cell>
+		<md-cell *cdkCellDef="let element" class="width1"> {{element.RRID}} </md-cell>
+	</ng-container>
+
+	<!-- Weight Column -->
+	<ng-container cdkColumnDef="Name">
+		<md-header-cell *cdkHeaderCellDef md-sort-header class="width2"> Name </md-header-cell>
+		<md-cell *cdkCellDef="let element" class="width2"> {{element.Name}} </md-cell>
+	</ng-container>
+
+	<!-- Color Column -->
+	<ng-container cdkColumnDef="ContactNumber">
+		<md-header-cell *cdkHeaderCellDef md-sort-header class="width3"> ContactNumber </md-header-cell>
+		<md-cell *cdkCellDef="let element" class="width3"> {{element.ContactNumber}} </md-cell>
+	</ng-container>
+
+		<!-- Position Column -->
+	<ng-container cdkColumnDef="Email">
+		<md-header-cell *cdkHeaderCellDef md-sort-header class="width4"> Email </md-header-cell>
+		<md-cell *cdkCellDef="let element" class="width4"> {{element.Email}} </md-cell>
+	</ng-container>
+
+		<!-- Position Column -->
+	<ng-container cdkColumnDef="AddressID">
+		<md-header-cell *cdkHeaderCellDef md-sort-header class="width5"> AddressID </md-header-cell>
+		<md-cell class="marginLeft" *cdkCellDef="let element" class="width5"> {{element.AddressID}} </md-cell>
+	</ng-container>
+
+		<!-- Comment Column -->
+	 <ng-container cdkColumnDef="Comment">
+		<md-header-cell *cdkHeaderCellDef md-sort-header class="width6"> Comment </md-header-cell>
+		<md-cell *cdkCellDef="let element" class="width6"> {{element.Comment}} </md-cell>
+	</ng-container> 
+
+		<!-- Status Column -->
+	 <ng-container cdkColumnDef="Status">
+		<md-header-cell *cdkHeaderCellDef md-sort-header class="width7"> Status </md-header-cell>
+		<md-cell *cdkCellDef="let element" class="width7"> {{element.Status}} </md-cell>
+	</ng-container> 
+
+		<!-- Position Column -->
+	<ng-container cdkColumnDef="AuthorizedForCamp">
+		<md-header-cell *cdkHeaderCellDef md-sort-header class="width8"> AuthorizedForCamp </md-header-cell>
+		<md-cell *cdkCellDef="let element" class="width8"> {{element.AuthorizedForCamp}} </md-cell>
+	</ng-container>
+
+		<md-header-row *cdkHeaderRowDef="displayedColumns"></md-header-row> 
+		<md-row *cdkRowDef="let row; columns: displayedColumns;"></md-row> 
+	</md-table>
+	<md-paginator #paginator
+		[length]="bloodBankListCount"
+		[pageIndex]="0"
+		[pageSize]="5"
+		[pageSizeOptions]="[5, 10, 25, 100]">
+	</md-paginator>
+</md-card>
+</div>
+
